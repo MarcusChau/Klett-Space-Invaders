@@ -1,6 +1,7 @@
 # Klett-Space-Invaders
 Processing
 
-# Modeled from @Geoff Natin
+# Modeled from @nating/space-invaders
+
 
 # Changed alot of the code to be more streamline, etc.
