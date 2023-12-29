@@ -25,7 +25,7 @@ class PowerUp {
       s+=.05;
       xpos += sway*sin(s);
       ypos += dy;
-      if(ypos-POWER_UP_HEIGHT>=SCREENY-2*MARGIN){
+      if(ypos-POWER_UP_HEIGHT>=height-2*MARGIN){
         powerUpScreen = false;
       }
     }
@@ -35,7 +35,7 @@ class PowerUp {
   void draw(){
     if(acquired==false){
       noStroke();
-      fill(255);    
+      fill(255);   
       rect(xpos-.5*POWER_UP_WIDTH,ypos-.1*POWER_UP_HEIGHT,POWER_UP_WIDTH,.2*POWER_UP_HEIGHT);
       rect(xpos-.3*POWER_UP_WIDTH,ypos-.3*POWER_UP_HEIGHT,.6*POWER_UP_WIDTH,.2*POWER_UP_HEIGHT);
       rect(xpos-.3*POWER_UP_WIDTH,ypos+.1*POWER_UP_HEIGHT,.6*POWER_UP_WIDTH,.2*POWER_UP_HEIGHT);
@@ -56,7 +56,8 @@ class PowerUp {
         textFont(gameFont,25);
         text("3",xpos,ypos+10);}
       else if(powerType==4){
-        rect(xpos-.2*POWER_UP_WIDTH,ypos-.2*POWER_UP_HEIGHT,.4*POWER_UP_WIDTH,.4*POWER_UP_HEIGHT);}
+        rect(xpos-.2*POWER_UP_WIDTH,ypos-.2*POWER_UP_HEIGHT,.4*POWER_UP_WIDTH,.4*POWER_UP_HEIGHT);
+      }
     }
   }
   

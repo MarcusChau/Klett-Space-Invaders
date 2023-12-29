@@ -14,13 +14,13 @@ class ShieldPiece{
     if(hit == false){
       fill(shieldColor);
       stroke(255,0,0);
-      rect(xpos-SHIELD_PIECE_WIDTH/2,ypos-SHIELD_PIECE_HEIGHT/2,SHIELD_PIECE_WIDTH,SHIELD_PIECE_HEIGHT);
+      rect(xpos-CONSUMABLES_WIDTH/2,ypos-CONSUMABLES_HEIGHT/2,CONSUMABLES_WIDTH,CONSUMABLES_HEIGHT);
     }
   }
   
   //See if a projectile has hit a shield piece, and remove it
   void explode(Projectile projectile){
-    if(projectile.xpos <= xpos+SHIELD_PIECE_WIDTH && projectile.xpos >= xpos && projectile.ypos >= ypos && projectile.ypos <= ypos+SHIELD_PIECE_HEIGHT){
+    if(projectile.xpos <= xpos+CONSUMABLES_WIDTH && projectile.xpos >= xpos && projectile.ypos >= ypos && projectile.ypos <= ypos+CONSUMABLES_HEIGHT){
       hit = true;
       xpos = 0-50;
       ypos = 0-50;
